@@ -1,0 +1,117 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* needed this so the poster can fit on the screen all at once */
+}
+
+/* Full page container for the poster */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+/* Poster container */
+.poster-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adjust the width of the poster */
+}
+
+/* Poster image */
+.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text overlay on top of the image */
+.text-overlay {
+    position: absolute;
+    bottom: 50px;  /* Adjust the position of text overlay */
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Movie title (PNG image) styling */
+.movie-title-image {
+    max-width: 35%; /* Ensures the title fits within the container */
+    height: 50%; /* Maintains the aspect ratio */
+    left: 35%;
+}
+
+
+/* Styling for the film credit text */
+.film-credit { /* Todd Phillips Name */
+    font-size: 15px; 
+    color: #929191; 
+    margin-top: 1px;  
+    font-family: 'Uni_acc', sans-serif; /* Apply custom font to the film credit text */
+}
+
+/* Actor name style */
+.actor-name {
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+
+/* Define custom font */
+@font-face {
+    font-family: 'Uni_acc';  /* Name for the custom font */
+    src: url('./font/Uni_acc.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Styling for the credits text */
+.credits p {
+    font-size: 14px;  /* Small font size */
+    color: #929191; /* Grey coloring for credits */
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Uni_acc', sans-serif;  /* Apply custom font */
+}
+
+/* Release date styling */
+.release-date {
+    position: absolute;
+    bottom: true;  /* Not sure if that true actually is the right thing to use but it put the date where i wanted it LOL */
+    left: 41%;
+    font-size: 15px;  
+    color: white;  
+    text-decoration: underline;  /* Add underline to emphasis Trailer Link */
+    font-weight: bold;
+}
+
+/* DC logo positioning (bottom-left corner) */
+.dc-logo {
+    position: absolute;
+    bottom: true;
+    left: 10px; /* Adjust this value to move it horizontally */
+    width: 50px; /* Adjust the size */
+    height: auto;
+}
+
+/* R Rating image positioning (bottom-right corner) */
+.r-rating {
+    position: absolute;
+    bottom: true;
+    right: 10px; /* Adjust this value to move it horizontally */
+    width: 50px; /* Adjust the size */
+    height: auto;
+}
+
+
+/* Styling for smaller text (used in credits) 
+.small-text {
+    font-size: 10px;
+} i originally had this in for my credits but i couldn't get all the credits to fit on the poster and decided to use the special characters for text short cuts
+*/
+
