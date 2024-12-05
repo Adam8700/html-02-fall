@@ -1,0 +1,371 @@
+/* ===========================
+   RESET STYLES
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   BASE STYLES
+=========================== */
+body {
+    font-family: 'Roboto', sans-serif; /* Default font is Roboto */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===========================
+   HEADER STYLES
+=========================== */
+header {
+    background-color: #f8f8f8; /* Light background color for the header */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px solid #ff0000; /* 10px red line below the header */
+}
+
+header .logo {
+    width: 200px; /* Default width for desktop */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Makes it clickable */
+}
+/* ===========================
+   BODY AND PAGE LAYOUT
+=========================== */
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0;    /* Remove default margin */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+main {
+    flex-grow: 1; /* Allow the main content area to expand and take available space */
+}
+
+/* ===========================
+   FOOTER STYLES
+=========================== */
+footer {
+    background-color: #fd0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to the footer */
+    width: 100%; /* Ensure it spans the full width of the page */
+}
+
+/* ===========================
+   NAVBAR STYLES
+=========================== */
+.navbar {
+    display: flex;
+}
+/* Initially hide the navbar on small screens */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide the navbar by default */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: block; /* Show the navbar when "active" class is added */
+    }
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #ff0000;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* ===========================
+   HAMBURGER ICON STYLES
+=========================== */
+.hamburger-icon {
+    display: none; /* Hidden by default on desktop */
+    font-size: 30px; /* Set size of the hamburger icon */
+    color: #000000; /* Set the color to black or any color you prefer */
+    cursor: pointer; /* Make the cursor a pointer on hover */
+}
+
+/* For mobile devices, show the hamburger icon */
+@media (max-width: 768px) {
+    #hamburger-icon {
+        display: block; /* Show the hamburger icon */
+        color: #ff0000; /* Set color to red or any color you want */
+    }
+
+    #hamburger-icon:hover {
+        color: #4e0a00; /* Change color on hover (optional) */
+    }
+}
+
+/* ===========================
+   MAIN CONTENT STYLES
+=========================== */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===========================
+   INTRO SECTION STYLES
+=========================== */
+.intro {
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   PRODUCT GRID STYLES
+=========================== */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-item {
+    width: 30%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside each product */
+}
+
+/* ===========================
+   PRODUCT IMAGE STYLES
+=========================== */
+.product-item img {
+    width: 310px;  /* Set a fixed width for all product images */
+    height: 150px; /* Set a fixed height to maintain uniform size */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    margin-bottom: 10px;
+}
+/* ===========================
+   ABOUT PAGE STYLES
+=========================== */
+.about-page {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 40px; /* Add padding around the content */
+    font-family: 'Roboto', sans-serif; /* Use a readable font */
+    color: #333; /* Set a dark text color for readability */
+    line-height: 1.8; /* Increase line height for better text readability */
+}
+
+.about-page h1 {
+    font-size: 2.5em; /* Make the heading larger */
+    margin-bottom: 20px; /* Add space below the heading */
+    text-align: center; /* Center-align the heading */
+    color: #ff0000; /* Use red for the heading to match the theme */
+}
+
+.about-page p {
+    font-size: 1.2em; /* Increase the font size of the paragraph text */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    text-align: justify; /* Justify the text for a more professional look */
+}
+
+.about-page img {
+    width: 100%; /* Make images responsive */
+    max-width: 600px; /* Limit image width on larger screens */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make images block-level for better flow */
+    margin: 20px auto; /* Center the images and add margin */
+}
+
+
+
+/* ===========================
+   RESPONSIVE STYLES FOR ABOUT PAGE
+=========================== */
+@media screen and (max-width: 768px) {
+    .about-page {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .about-page h1 {
+        font-size: 2em; /* Adjust heading size for smaller screens */
+    }
+
+    .about-page p {
+        font-size: 1.1em; /* Adjust paragraph text size */
+    }
+}
+
+/* ===========================
+   CONTACT FORM STYLES
+=========================== */
+.contact-form {
+    max-width: 600px; /* Limit the width of the contact form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+}
+
+.contact-form label {
+    display: block; /* Make the labels block-level to ensure inputs stack vertically */
+    margin-bottom: 5px; /* Add some space below each label */
+    font-weight: bold; /* Optional: Make labels bold for better visibility */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; /* Make the input fields and textarea take up the full width of the form */
+    padding: 10px; /* Add some padding for better readability */
+    margin-bottom: 15px; /* Add space between each input field */
+    border: 1px solid #ccc; /* Add border around the inputs */
+    border-radius: 5px; /* Rounded corners for a smoother look */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #720800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #4e0a00; /* Darken button on hover */
+}
+
+
+/* ===========================
+   CTA BUTTON STYLES
+=========================== */
+.cta-button, .product-link {
+    display: inline-block;
+    background-color: #720800;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600; /* Apply Poppins font with semi-bold weight */
+    color: #fafafa;
+}
+
+.cta-button:hover, .product-link:hover {
+    background-color: #4e0a00; /* Darken the background color */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+
+/* ===========================
+   RESPONSIVE DESIGN STYLES
+=========================== */
+
+/* Logo size for smaller screens */
+@media screen and (max-width: 768px) {
+    header .logo {
+        width: 80px; /* Smaller width on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .logo {
+        width: 60px; /* Even smaller on very small screens */
+    }
+}
+
+/* Adjust navigation links for smaller screens */
+@media screen and (max-width: 1024px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Adjust product layout for tablets */
+    .product-item {
+        width: 45%; /* Take up more space on smaller screens */
+    }
+}
+
+/* Make product items take up full width on mobile screens */
+@media screen and (max-width: 768px) {
+    .product-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Make the navigation links stack vertically on mobile */
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* Adjust intro section for mobile screens */
+    .intro h1 {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+    }
+}
+
+/* Mobile-first adjustments */
+@media screen and (max-width: 320px) {
+    /* Reduce text size and padding on very small screens */
+    body {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* =========================== 
+   PRODUCT IMAGE STYLES (CUSTOM FOR BOTH PAGES)
+=========================== */
+.contact-form img {
+    width: 200px; /* Make the image responsive and take up full width of the container */
+    max-width: 500px; /* Limit the max width for desktop views */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any unwanted space below the image */
+    margin: 20px auto; /* Center the image and add margin for spacing */
+}
+
+.product-detail img {
+    width: 100%; /* Make the image responsive and take up full width of the container */
+    max-width: 500px; /* Limit the max width for desktop views */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any unwanted space below the image */
+    margin: 20px auto; /* Center the image and add margin for spacing */
+}
+
+/* Mobile adjustments for both images */
+@media (max-width: 768px) {
+    .contact-form img, .product-detail img {
+        max-width: 90%; /* Adjust to 90% of the container width on mobile */
+        margin: 10px auto; /* Add some smaller margin on mobile */
+    }
+}
+
