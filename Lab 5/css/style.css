@@ -1,0 +1,99 @@
+/* ===========================
+   RESET STYLES
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   BASE STYLES
+=========================== */
+body {
+    font-family: 'Roboto', sans-serif; /* Default font is Roboto */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===========================
+   HEADER STYLES
+=========================== */
+header {
+    background-color: #f8f8f8; /* Light background color for the header */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > .logo {
+    width: auto; /* Default width for desktop */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Makes it clickable */
+}
+/* ===========================
+   BODY AND PAGE LAYOUT
+=========================== */
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0;    /* Remove default margin */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+main {
+    flex-grow: 1; /* Allow the main content area to expand and take available space */
+}
+
+/* ===========================
+   FOOTER STYLES
+=========================== */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to the footer */
+    width: 100%; /* Ensure it spans the full width of the page */
+}
+
+/* ===========================
+   NAVBAR STYLES
+=========================== */
+.navbar {
+    display: flex;
+}
+/* Initially hide the navbar on small screens */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide the navbar by default */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: block; /* Show the navbar when "active" class is added */
+    }
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #020202;
+    text-decoration: underline;
+    font-size: 16px;
+}
